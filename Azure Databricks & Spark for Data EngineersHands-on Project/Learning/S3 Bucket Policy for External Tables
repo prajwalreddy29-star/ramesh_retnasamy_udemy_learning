@@ -1,0 +1,18 @@
+# Step 1 : 
+Block App Public Access - OFF
+
+#Step 2 :  S3 Bucket (databricks-practice-bucket-01) Policy used 
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::databricks-practice-bucket-01/*"
+        }
+    ]
+}
+
+
